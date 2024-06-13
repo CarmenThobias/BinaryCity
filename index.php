@@ -1,33 +1,42 @@
-<?php include 'config/db.php'; ?>
-
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Client Management</title>
+    <title>Client Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            text-align: center;
+        }
+        .button-container {
+            margin-top: 50px;
+        }
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            color: #fff;
+            background-color: #007BFF;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <h1>Client Management System</h1>
-
-    <h2>Add New Client</h2>
-    <form method="POST" action="addClient.php">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br>
-        <label for="client_code">Client Code:</label>
-        <input type="text" id="client_code" name="client_code" required><br>
-        <button type="submit">Add Client</button>
-    </form>
-
-    <h2>Add New Contact</h2>
-    <form method="POST" action="addContact.php">
-        <label for="first_name">First Name:</label>
-        <input type="text" id="first_name" name="first_name" required><br>
-        <label for="last_name">Last Name:</label>
-        <input type="text" id="last_name" name="last_name" required><br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br>
-        <button type="submit">Add Contact</button>
-    </form>
-
+    <div class="container">
+        <h1>Client Management System</h1>
+        <div class="button-container">
+            <a href="../forms/addClient.php">Add New Client</a>
+            <a href="../forms/addContact.php">Add New Contact</a>
+            <a href="../views/clients_view.php">View Clients</a>
+            <a href="../views/contacts_view.php">View Contacts</a>
+        </div>
+    </div>
 </body>
 </html>
